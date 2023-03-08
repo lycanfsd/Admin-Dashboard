@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="./js/script.js"></script>
     <title>Admin Dashboard</title>
 </head>
@@ -12,41 +13,59 @@
     <div class="container">
         <div class="sidebar">
             <div class="logo-container">    
-                <img src="" alt="" class="logo">
+                <img src="./img/dashboard-logo.svg" alt="Admin Dashboard Logo" class="logo">
                 <h1 class="logo-text">Dashboard</h1>
             </div>
             <ul class="menu-top">
-                <li id="home-link">Home</li>
-                <li id="profile-link">Profile</li>
-                <li id="messages-link">Messages</li>
-                <li id="history-link">History</li>
-                <li id="tasks-link">Tasks</li>
-                <li id="communities-link">Communities</li>
+                <li id="home-link"><a href='#'>Home</a></li>
+                <li id="profile-link"><a href='#'>Profile</a></li>
+                <li id="messages-link"><a href='#'>Messages</a></li>
+                <li id="history-link"><a href='#'>History</a></li>
+                <li id="tasks-link"><a href='#'>Tasks</a></li>
+                <li id="communities-link"><a href='#'>Communities</a></li>
             </ul>
             <ul class="menu-bottom">
-                <li id="settings-link">Settings</li>
-                <li id="support-link">Support</li>
-                <li id="privacy-link">Privacy</li>
+                <li id="settings-link"><a href='#'>Settings</a></li>
+                <li id="support-link"><a href='#'>Support</a></li>
+                <li id="privacy-link"><a href='#'>Privacy</a></li>
             </ul>
         </div>
         <div class="header">
-            <img src="" alt="" class="search-icon">
-            <input type="search" name="searchbar" id="searchbar">
-            <img src="" alt="" class="notification-icon">
-            <img src="" alt="" class="profile-image">
-            <a href="#" class="username">Username</a>
 
-            <img src="" alt="" class="profile-image-greet">
-            <p class="greeting">Hi there,</p>
-            <p class="username-greeting">Username (@username)</p>
+            <div class="greeting">
+                <img src="" alt="" class="profile-image-greet" id="profile-img">
+                <div class="user-greeting">
+                    <p class="greeting-text">Hi there,</p>
+                    <p class="username-greeting">Username (@username)</p> 
+                </div>
+            </div>
 
-            <button class="new">New</button>
-            <button class="upload">Upload</button>
-            <button class="share">Share</button>
+            <div class="user">
+                <img src="./img/notification-icon.svg" alt="Notification Ringing Bell Icon" class="notification-icon">
+                <img src="" alt="" class="profile-image" id="profile-img">
+                <a href="#" class="username">Username</a>
+            </div>
+
+            <div class="search">
+                <div class="search-bar">
+                    <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
+                    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                      <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                      </svg>
+                    </button>
+                  </div>
+            </div>
+
+            <div class="share-buttons">
+                <button class="new">New</button>
+                <button class="upload">Upload</button>
+                <button class="share">Share</button>
+            </div>
+            
         </div>
         <div class="main">
+            <!-- <h2 class="info-section-title">Your Projects</h2> -->
             <div class="info">
-                <h2 class="info-section-title">Your Projects</h2>
                 <div class="info-card">
                     <h4 class="info-title">Title</h4>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -108,56 +127,55 @@
                         laborum.</p>
                 </div>
             </div>
-            <div class="announcements">
-                <h2 class="announcement-section-title">Announcements</h2>
-                <div class="announcement-card">
-                    <h4 class="announcement-title">Announcement Title</h4>
-                    <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat.</p>
+            <div class="right-container">
+                <!-- <h2 class="announcement-section-title">Announcements</h2> -->
+                <div class="announcements">
+                    <div class="announcement-card">
+                        <h4 class="announcement-title">Announcement Title</h4>
+                        <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat.</p>
+                    </div>
+                    <div class="announcement-card">
+                        <h4 class="announcement-title">Announcement Title</h4>
+                        <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat.</p>
+                    </div>
+                    <div class="announcement-card">
+                        <h4 class="announcement-title">Announcement Title</h4>
+                        <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat.</p>
+                    </div>
                 </div>
-                <div class="announcement-card">
-                    <h4 class="announcement-title">Announcement Title</h4>
-                    <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat.</p>
-                </div>
-                <div class="announcement-card">
-                    <h4 class="announcement-title">Announcement Title</h4>
-                    <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat.</p>
+                <!-- <h2 class="trending-section-title">Trending</h2> -->
+                <div class="trending">
+                    <div class="trending-card">
+                        <img src="" alt="" class="trending-profile-pic">
+                        <h4 class="trending-title"></h4>
+                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="trending-card">
+                        <img src="" alt="" class="trending-profile-pic">
+                        <h4 class="trending-title"></h4>
+                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="trending-card">
+                        <img src="" alt="" class="trending-profile-pic">
+                        <h4 class="trending-title"></h4>
+                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="trending-card">
+                        <img src="" alt="" class="trending-profile-pic">
+                        <h4 class="trending-title"></h4>
+                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
                 </div>
             </div>
-            <div class="trending">
-                <h2 class="trending-section-title">Trending</h2>
-                <div class="trending-card">
-                    <img src="" alt="" class="trending-profile-pic">
-                    <h4 class="trending-title"></h4>
-                    <p class="trending-description">Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="trending-card">
-                    <img src="" alt="" class="trending-profile-pic">
-                    <h4 class="trending-title"></h4>
-                    <p class="trending-description">Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="trending-card">
-                    <img src="" alt="" class="trending-profile-pic">
-                    <h4 class="trending-title"></h4>
-                    <p class="trending-description">Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="trending-card">
-                    <img src="" alt="" class="trending-profile-pic">
-                    <h4 class="trending-title"></h4>
-                    <p class="trending-description">Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <p class="createdby">Created by LYCANFSD</p>
         </div>
     </div>
 </body>
