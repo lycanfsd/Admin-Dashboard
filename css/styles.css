@@ -6,6 +6,13 @@
 
 :root {
     --profile-image: url(../img/profile-image.jpg);
+    --sidebar-color: #252a2f;
+    --header-color: #f2f2ee;
+    --button-color: var(--text-color);
+    --main-color: #f2f2ee;
+    --card-color: var(--text-color);
+    --text-color: #e7aea7;
+    --text-color-header: var(var(--sidebar-color))
 }
 
 html,
@@ -30,7 +37,7 @@ body {
 /* Sidebar Styles */
 
 .sidebar {
-    background-color: ghostwhite;
+    background-color: var(--sidebar-color);
     grid-column-start: 1;
     grid-row: 1 /  3;
     place-content: start;
@@ -41,7 +48,8 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh
+    height: 100vh;
+    width: fit-content;
 }
 
 .menu-wrapper {
@@ -61,7 +69,9 @@ body {
 }
 
 .sidebar li:hover {
-    text-decoration: underline;
+    text-shadow: 0px 0px 10px var(--text-color);
+    transition: 0.2s;;
+    transform: scale(1.02);
 }
 
 .logo-container {
@@ -74,10 +84,14 @@ body {
 
 .logo {
     width: 15%;
+    margin-right: 0.5rem;
+    background-color: none;
+    filter: invert(79%) sepia(6%) saturate(2000%) hue-rotate(317deg) brightness(97%) contrast(86%);
 }
 
 .logo-container h1 {
     font-size: 2rem;
+    color: var(--text-color);
 }
 
 ul {
@@ -96,7 +110,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 a:visited {
@@ -130,11 +144,14 @@ a:visited {
 
 .icon {
     width: 2rem;
+    background-color: none;
+    filter: invert(79%) sepia(6%) saturate(2000%) hue-rotate(317deg) brightness(97%) contrast(86%);
 }
 
 /* Header Styles */
 
 .header {
+    background-color: var(--header-color);
     display: grid;
     grid-column-start: 2;
     grid-row: 1 / 2;
@@ -159,7 +176,7 @@ a:visited {
 #searchQueryInput {
     width: 100%;
     height: 2.3rem;
-    background: #f5f5f5;
+    background: white;
     outline: none;
     border: none;
     border-radius: 1.625rem;
@@ -206,10 +223,12 @@ a:visited {
 
 .greeting-text {
     font-size: 1.5rem;
+    color: var(--text-color-header);
 }
 
 .username-greeting {
     font-size: 2rem;
+    color: var(--text-color-header);
 }
 
 .user {
@@ -225,6 +244,18 @@ a:visited {
 
 .username {
     font-size: 1.2rem;
+    color: var(--text-color-header);
+}
+
+.username:hover {
+    transition: 0.1s;
+    transform: scale(1.02);
+}
+
+.notification-icon:hover {
+    transition: 0.1s;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .profile-image {
@@ -235,9 +266,16 @@ a:visited {
     height: 60px;
 }
 
+.profile-image:hover {
+    box-shadow: 0px 0px 10px var(--card-color);
+    transition: 0.1s;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
 #profile-img {
     border-radius: 100%;
-    border: solid grey 2px;
+    border: solid var(--sidebar-color) 2px;
 }
 
 .share-buttons {
@@ -253,26 +291,32 @@ a:visited {
 .share-buttons > button {
     width: 7rem;
     height: 3rem;
-    background-color: lightblue;
+    background-color: var(--button-color);
+    color: var(--text-color-header);
     border-radius: 30px;
     outline: none;
     border: none;
     font-size: 1rem;
+    box-shadow: 1px 1px 2px;
 }
 
 .share-buttons > button:hover {
-    background-color: rgb(151, 190, 202);
+    background-color: var(--button-color);
+    transition: 0.1s;
+    transform: scale(1.02);
     cursor: pointer;
 }
 
 .notification-icon{
     width: 2.2rem;
+    background-color: none;
+    filter: invert(15%) sepia(8%) saturate(869%) hue-rotate(169deg) brightness(95%) contrast(95%);
 }
 
 /* Main Styles */
 
 .main {
-    background-color: lightblue;
+    background-color: var(--main-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-row-start: 2;
@@ -294,12 +338,14 @@ a:visited {
 }
 
 .info-section-title {
+    color: var(--text-color-header);
     grid-column: 1 / -1;
     margin-bottom: -1rem;
 }
 
 .info-card {
-    background-color: #f5f5f5;
+    background-color: var(--card-color);
+    color: var(--text-color-header);
     border-radius: 10px;
     box-shadow: 2px 2px 3px 1px black;
     display: flex;
@@ -308,7 +354,7 @@ a:visited {
 }
 
 .info-card:hover {
-    transition: 0.2s;;
+    transition: 0.2s;
     transform: scale(1.01);
 }
 
@@ -330,7 +376,8 @@ a:visited {
 }
 
 .announcements {
-    background-color: #f5f5f5;
+    background-color: var(--card-color);
+    color: var(--text-color-header);
     padding: 0rem 2rem;
     border-radius: 10px;
     box-shadow: 2px 2px 3px 1px black;
@@ -344,6 +391,7 @@ a:visited {
 
 .announcement-section-title {
     align-self: flex-end;
+    color: var(--text-color-header);
 }
 
 .announcement-card >.announcement-title {
@@ -351,7 +399,8 @@ a:visited {
 }
 
 .trending {
-    background-color: #f5f5f5;
+    background-color: var(--card-color);
+    color: var(--text-color-header);
     padding: 0rem 2rem;
     border-radius: 10px;
     box-shadow: 2px 2px 3px 1px black;
@@ -371,11 +420,10 @@ a:visited {
 }
 
 .trending-profile-pic {
-    background-color: blueviolet;
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: solid grey 2px;
+    border: solid var(--sidebar-color) 2px;
 }
 
 .trending-title {
@@ -390,7 +438,7 @@ a:visited {
 }
 
 .announcement-border {
-    background-color: grey;
+    background-color: var(--sidebar-color);
     width: 100%;
     height: 1px;
 }
