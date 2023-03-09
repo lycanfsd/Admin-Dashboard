@@ -12,23 +12,25 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="logo-container">    
-                <img src="./img/dashboard-logo.svg" alt="Admin Dashboard Logo" class="logo">
-                <h1 class="logo-text">Dashboard</h1>
+            <div class="wrapper">
+                <div class="logo-container">    
+                    <img src="./img/dashboard-logo.svg" alt="Admin Dashboard Logo" class="logo">
+                    <h1 class="logo-text">Dashboard</h1>
+                </div>
+                <ul class="menu-top">
+                    <li id="home-link"><a href='#'>Home</a></li>
+                    <li id="profile-link"><a href='#'>Profile</a></li>
+                    <li id="messages-link"><a href='#'>Messages</a></li>
+                    <li id="history-link"><a href='#'>History</a></li>
+                    <li id="tasks-link"><a href='#'>Tasks</a></li>
+                    <li id="communities-link"><a href='#'>Communities</a></li>
+                </ul>
+                <ul class="menu-bottom">
+                    <li id="settings-link"><a href='#'>Settings</a></li>
+                    <li id="support-link"><a href='#'>Support</a></li>
+                    <li id="privacy-link"><a href='#'>Privacy</a></li>
+                </ul>
             </div>
-            <ul class="menu-top">
-                <li id="home-link"><a href='#'>Home</a></li>
-                <li id="profile-link"><a href='#'>Profile</a></li>
-                <li id="messages-link"><a href='#'>Messages</a></li>
-                <li id="history-link"><a href='#'>History</a></li>
-                <li id="tasks-link"><a href='#'>Tasks</a></li>
-                <li id="communities-link"><a href='#'>Communities</a></li>
-            </ul>
-            <ul class="menu-bottom">
-                <li id="settings-link"><a href='#'>Settings</a></li>
-                <li id="support-link"><a href='#'>Support</a></li>
-                <li id="privacy-link"><a href='#'>Privacy</a></li>
-            </ul>
         </div>
         <div class="header">
 
@@ -64,8 +66,8 @@
             
         </div>
         <div class="main">
-            <!-- <h2 class="info-section-title">Your Projects</h2> -->
             <div class="info">
+                <h2 class="info-section-title">Your Projects</h2>
                 <div class="info-card">
                     <h4 class="info-title">Title</h4>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -128,7 +130,7 @@
                 </div>
             </div>
             <div class="right-container">
-                <!-- <h2 class="announcement-section-title">Announcements</h2> -->
+                <h2 class="announcement-section-title">Announcements</h2>
                 <div class="announcements">
                     <div class="announcement-card">
                         <h4 class="announcement-title">Announcement Title</h4>
@@ -137,6 +139,7 @@
                             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                             ex ea commodo consequat.</p>
                     </div>
+                    <div class="announcement-border"></div>
                     <div class="announcement-card">
                         <h4 class="announcement-title">Announcement Title</h4>
                         <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -144,6 +147,7 @@
                             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                             ex ea commodo consequat.</p>
                     </div>
+                    <div class="announcement-border"></div>
                     <div class="announcement-card">
                         <h4 class="announcement-title">Announcement Title</h4>
                         <p class="announcement-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -152,27 +156,35 @@
                             ex ea commodo consequat.</p>
                     </div>
                 </div>
-                <!-- <h2 class="trending-section-title">Trending</h2> -->
+                <h2 class="trending-section-title">Trending</h2>
                 <div class="trending">
                     <div class="trending-card">
                         <img src="" alt="" class="trending-profile-pic">
-                        <h4 class="trending-title"></h4>
-                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="trending-text-wrapper">
+                            <h4 class="trending-title">Title</h4>
+                            <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                     <div class="trending-card">
                         <img src="" alt="" class="trending-profile-pic">
-                        <h4 class="trending-title"></h4>
-                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="trending-text-wrapper">
+                            <h4 class="trending-title">Title</h4>
+                            <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                     <div class="trending-card">
                         <img src="" alt="" class="trending-profile-pic">
-                        <h4 class="trending-title"></h4>
-                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="trending-text-wrapper">
+                            <h4 class="trending-title">Title</h4>
+                            <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                     <div class="trending-card">
                         <img src="" alt="" class="trending-profile-pic">
-                        <h4 class="trending-title"></h4>
-                        <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="trending-text-wrapper">
+                            <h4 class="trending-title">Title</h4>
+                            <p class="trending-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
                     </div>
                 </div>
             </div>
